@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DZCdevs - Yazılım Geliştirici Grubu</title>
+  <meta name="description" content="DZCdevs - modern, açık kaynak ve yüksek performanslı yazılım çözümleri geliştirir." />
+  <meta name="keywords" content="DZCdevs, yazılım, açık kaynak, web, mobil, devops, JavaScript" />
+  <meta property="og:title" content="DZCdevs - Yazılım Geliştirici Grubu" />
+  <meta property="og:description" content="DZCdevs - modern, açık kaynak ve yüksek performanslı yazılım çözümleri geliştirir." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">İçeriğe atla</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="DZCdevs ana sayfa">
+        <img src="logo.png" alt="DZCdevs logo" width="40" height="40" />
+        <span>DZCdevs</span>
+      </a>
+      <nav class="nav" aria-label="Ana navigasyon">
+        <ul class="nav-list">
+          <li><a href="#home">Ana Sayfa</a></li>
+          <li><a href="#about">Hakkımızda</a></li>
+          <li><a href="#projects">Projeler</a></li>
+          <li><a href="#team">Ekip</a></li>
+          <li><a href="#contact">İletişim</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section id="home" class="hero" aria-label="Giriş">
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner">
+        <h1 class="hero-title">DZCdevs</h1>
+        <p class="hero-subtitle">
+          <span id="typing"></span><span class="cursor">|</span>
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title" class="section-title">Hakkımızda</h2>
+        <div class="code-card" role="article">
+          <pre><code>// DZCdevs: açık kaynak tutkusu ile modern yazılım çözümleri üretir
+const team = {
+  mission: "Yaratıcı, sürdürülebilir, kullanıcı odaklı projeler",
+  values: ["Açıklık", "Hız", "Kalite", "Topluluk"],
+  stack: ["JavaScript", "Go", "Rust", "Cloud"],
+};
+
+export default team;
+</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title" class="section-title">Projelerimiz</h2>
+        <p class="section-description">GitHub organizasyonumuzdaki popüler projeleri burada görebilirsiniz.</p>
+        <div id="projectsGrid" class="grid"></div>
+      </div>
+    </section>
+
+    <section id="team" class="section" aria-labelledby="team-title">
+      <div class="container">
+        <h2 id="team-title" class="section-title">Ekip Üyeleri</h2>
+        <p class="section-description">Tutkulu geliştiricilerden oluşan ekip.</p>
+        <div class="team-grid">
+          <article class="team-card" tabindex="0">
+            <div class="team-avatar" aria-hidden="true"></div>
+            <h3>Ayşe Y.</h3>
+            <p>Full-stack Developer</p>
+          </article>
+          <article class="team-card" tabindex="0">
+            <div class="team-avatar" aria-hidden="true"></div>
+            <h3>Mehmet K.</h3>
+            <p>DevOps & Cloud</p>
+          </article>
+          <article class="team-card" tabindex="0">
+            <div class="team-avatar" aria-hidden="true"></div>
+            <h3>Elif T.</h3>
+            <p>UI/UX & Frontend</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" class="section-title">İletişim</h2>
+        <p class="section-description">Bize ulaşmak için formu doldurun; hızlıca yanıtlıyoruz.</p>
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label>
+            Adınız
+            <input type="text" name="name" required placeholder="Adınız" />
+          </label>
+          <label>
+            E-posta
+            <input type="email" name="email" required placeholder="email@ornek.com" />
+          </label>
+          <label>
+            Mesajınız
+            <textarea name="message" rows="5" required placeholder="Mesajınızı yazın..."></textarea>
+          </label>
+          <button type="submit" class="btn">Gönder</button>
+          <p class="hint">Formspree kullanımı için <strong>YOUR_FORM_ID</strong> kısmını kendi ID'nizle değiştirin.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <aside class="terminal" aria-label="Sanal terminal" role="complementary">
+    <div class="terminal-header">
+      <span class="term-dot" aria-hidden="true"></span>
+      <span class="term-dot" aria-hidden="true"></span>
+      <span class="term-dot" aria-hidden="true"></span>
+      <span class="term-title">dzc@web</span>
+    </div>
+    <div class="terminal-body" id="terminalBody" tabindex="0" aria-live="polite"></div>
+    <div class="terminal-input">
+      <label for="terminalInput" class="visually-hidden">Terminal komutu</label>
+      <input id="terminalInput" type="text" autocomplete="off" placeholder="/help" />
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> DZCdevs. Tüm hakları saklıdır.</p>
+      <p id="lastUpdate" class="last-update">Son güncelleme: ...</p>
+    </div>
+  </footer>
+
+  <div class="cursor" aria-hidden="true"></div>
+</body>
+</html>
